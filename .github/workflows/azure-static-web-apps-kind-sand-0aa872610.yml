@@ -33,10 +33,9 @@ jobs:
         working-directory: "./azconf-codespace-test-site"
         env:
           JEKYLL_ENV: production
-      - name: Upload artifact
-        # Automatically uploads an artifact from the './_site' directory by default
-        uses: actions/upload-pages-artifact@v2
-        working-directory: "./azconf-codespace-test-site"
+      - name: Upload artifact       
+        uses: actions/upload-artifact@v3
+        path: "./azconf-codespace-test-site/_site"
  
   deploy:
     runs-on: ubuntu-latest
