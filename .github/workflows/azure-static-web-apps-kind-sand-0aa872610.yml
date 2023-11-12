@@ -46,11 +46,17 @@ jobs:
       - uses: actions/download-artifact@v3
         with:
           name: azconf-demo-artifact
+      
+      - name: Display structure of downloaded files
+        run: ls -R
 
       - name: Extract artifact
         run: |
-          tar -xvf artifact.tar
-          rm artifact.tar
+          unzip azconf-demo-artifact.zip
+          rm azconf-demo-artifact.zip
+          
+      - name: Display structure of downloaded files
+        run: ls -R    
 
       - name: Deploy to Static Web Apps
         id: deploy
