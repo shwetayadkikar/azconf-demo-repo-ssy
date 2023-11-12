@@ -35,7 +35,9 @@ jobs:
           JEKYLL_ENV: production
       - name: Upload artifact       
         uses: actions/upload-artifact@v3
-        path: "./azconf-codespace-test-site/_site"
+        with:
+          name: azconf-demo-artifact
+          path: "./azconf-codespace-test-site/_site"
  
   deploy:
     runs-on: ubuntu-latest
