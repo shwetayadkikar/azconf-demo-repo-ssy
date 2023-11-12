@@ -50,14 +50,6 @@ jobs:
       - name: Display structure of downloaded files
         run: ls -R
 
-      - name: Extract artifact
-        run: |
-          unzip azconf-demo-artifact.zip
-          rm azconf-demo-artifact.zip
-          
-      - name: Display structure of downloaded files
-        run: ls -R    
-
       - name: Deploy to Static Web Apps
         id: deploy
         uses: Azure/static-web-apps-deploy@v1
