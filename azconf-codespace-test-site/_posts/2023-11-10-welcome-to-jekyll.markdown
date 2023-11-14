@@ -31,7 +31,7 @@ Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most ou
 <p>Loading content from the API: <b id="name">...</b></p>
 <script>
     (async function() {
-        const { res } = await( await fetch(`/api/comment?name=shweta`)).json();
+        const  res  = await( await fetch('/api/comment?name=shweta')).json();
         console.log(res);
         document.querySelector('#name').textContent = res;
     }());
