@@ -32,6 +32,7 @@ Check out the [Jekyll docs][jekyll-docs] for more info on how to get the most ou
 <script>
     (async function() {
         const { text } = await( await fetch(`/api/comment?name=shweta`)).json();
+        console.log(text);
         document.querySelector('#name').textContent = text;
     }());
 </script>
